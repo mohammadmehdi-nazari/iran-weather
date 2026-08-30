@@ -1,0 +1,455 @@
+/* =====================================================
+   سامانه نمایش آب‌وهوای ایران - Stylesheet اصلی
+   ===================================================== */
+
+:root {
+  /* رنگ‌های پایه - Light Mode */
+  --bg-primary: #f4f6f9;
+  --bg-secondary: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.65);
+  --text-primary: #1a1d29;
+  --text-secondary: #5c6270;
+  --border-color: rgba(20, 20, 40, 0.08);
+  --shadow-soft: 0 8px 30px rgba(20, 20, 50, 0.08);
+  --shadow-strong: 0 15px 45px rgba(20, 20, 50, 0.18);
+  --accent-primary: #2563eb;
+  --accent-primary-hover: #1d4ed8;
+
+  /* رنگ‌بندی وضعیت آب‌وهوا */
+  --w-extreme-hot: #dc2626;
+  --w-hot: #f59e0b;
+  --w-warm: #fb923c;
+  --w-mild: #14b8a6;
+  --w-cold: #3b82f6;
+  --w-extreme-cold: #1e3a8a;
+  --w-rain: #60a5fa;
+  --w-heavy-rain: #2563eb;
+  --w-snow: #93c5fd;
+  --w-storm: #6d28d9;
+  --w-unknown: #9ca3af;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --transition-fast: 0.2s ease;
+  --transition-mid: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f1220;
+  --bg-secondary: #171b2c;
+  --bg-glass: rgba(23, 27, 44, 0.65);
+  --text-primary: #eef0f7;
+  --text-secondary: #9aa0b4;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background var(--transition-mid), color var(--transition-mid);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input { font-family: inherit; }
+
+/* ===================== HEADER ===================== */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 28px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-left, .header-right { display: flex; align-items: center; gap: 16px; }
+.header-center { flex: 1; display: flex; justify-content: center; max-width: 480px; margin: 0 auto; }
+
+.logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.1rem; }
+.logo-icon { font-size: 1.4rem; }
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 6px 8px 6px 16px;
+  box-shadow: var(--shadow-soft);
+  transition: border-color var(--transition-fast);
+}
+.search-box:focus-within { border-color: var(--accent-primary); }
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  padding: 6px 4px;
+}
+.search-box input::placeholder { color: var(--text-secondary); }
+
+.search-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  color: #fff;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+.search-box button:hover { background: var(--accent-primary-hover); }
+
+.autocomplete-list {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-strong);
+  max-height: 260px;
+  overflow-y: auto;
+  display: none;
+  z-index: 50;
+}
+.autocomplete-list.show { display: block; }
+.autocomplete-item {
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  display: flex;
+  justify-content: space-between;
+}
+.autocomplete-item:hover { background: var(--bg-primary); }
+.autocomplete-item small { color: var(--text-secondary); }
+
+.main-nav { display: flex; gap: 20px; }
+.nav-link {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 8px 4px;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.nav-link:hover, .nav-link.active { color: var(--accent-primary); border-bottom-color: var(--accent-primary); }
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+.icon-btn:hover { color: var(--accent-primary); transform: rotate(20deg); }
+
+/* ===================== MAIN LAYOUT ===================== */
+.app-main { flex: 1; display: flex; flex-direction: column; }
+
+.map-section { padding: 32px 28px 16px; }
+.map-intro { text-align: center; margin-bottom: 22px; }
+.map-intro h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 6px; }
+.map-intro p { color: var(--text-secondary); font-size: 0.95rem; }
+
+.map-container {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+  min-height: 480px;
+}
+
+.map-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  z-index: 5;
+}
+
+.spinner {
+  width: 38px; height: 38px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.iran-map-wrapper { width: 100%; height: 100%; min-height: 440px; cursor: grab; }
+.iran-map-wrapper:active { cursor: grabbing; }
+.iran-map-wrapper svg { width: 100%; height: auto; display: block; }
+
+/* استان‌ها روی نقشه */
+.province-path {
+  stroke: var(--bg-secondary);
+  stroke-width: 1.2;
+  cursor: pointer;
+  transition: fill var(--transition-mid), filter var(--transition-fast), transform var(--transition-fast);
+  transform-origin: center;
+}
+.province-path:hover { filter: brightness(1.12); transform: translateY(-1px); }
+.province-path.selected { stroke: var(--accent-primary); stroke-width: 2.5; }
+
+.neighbor-country { fill: var(--bg-primary); stroke: var(--border-color); stroke-width: 1; opacity: 0.55; }
+.sea-area { fill: #a9d4e8; opacity: 0.5; }
+[data-theme="dark"] .sea-area { fill: #274b63; opacity: 0.6; }
+
+.map-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  box-shadow: var(--shadow-strong);
+  z-index: 20;
+  display: none;
+  white-space: nowrap;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.legend-item i { width: 12px; height: 12px; border-radius: 4px; display: inline-block; }
+
+/* ===================== SIDE PANEL (استان) ===================== */
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 380px;
+  max-width: 90vw;
+  height: 100%;
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-strong);
+  z-index: 200;
+  transition: right var(--transition-mid);
+  display: flex;
+  flex-direction: column;
+}
+.side-panel.open { right: 0; }
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+.panel-header h2 { font-size: 1.2rem; font-weight: 700; }
+
+.close-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.close-btn:hover { background: var(--border-color); color: var(--text-primary); }
+
+.panel-body { padding: 20px 24px; overflow-y: auto; }
+.panel-subtitle { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 14px; }
+
+.city-list { display: flex; flex-direction: column; gap: 10px; }
+.city-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.city-item:hover { transform: translateX(-4px); border-color: var(--accent-primary); box-shadow: var(--shadow-soft); }
+.city-item .city-name { font-weight: 600; }
+.city-item .city-name-en { color: var(--text-secondary); font-size: 0.78rem; display: block; }
+
+/* ===================== WEATHER MODAL ===================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 20, 0.5);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+
+.weather-modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+  padding: 30px 26px;
+  animation: modalIn var(--transition-mid);
+}
+@keyframes modalIn { from { opacity: 0; transform: translateY(16px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.weather-modal .close-btn { position: absolute; top: 18px; left: 18px; }
+
+.weather-loading, .weather-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+.weather-error { color: #dc2626; }
+
+.weather-main-info { text-align: center; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; }
+.weather-location h2 { font-size: 1.4rem; font-weight: 800; }
+.weather-location p { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 10px; }
+
+.weather-temp-block { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0; }
+.condition-icon { width: 56px; height: 56px; }
+.main-temp { font-size: 3rem; font-weight: 800; }
+.condition-text { font-size: 1rem; color: var(--text-secondary); margin-bottom: 8px; }
+.feels-like, .last-updated { font-size: 0.8rem; color: var(--text-secondary); }
+
+.weather-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast);
+}
+.weather-card:hover { transform: translateY(-3px); }
+.card-icon { font-size: 1.3rem; }
+.card-label { font-size: 0.75rem; color: var(--text-secondary); }
+.card-value { font-size: 0.95rem; font-weight: 700; }
+
+/* ===================== CREATORS ===================== */
+.creators-section { padding: 50px 28px; text-align: center; }
+.section-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 28px; }
+
+.creators-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.creator-card {
+  width: 220px;
+  padding: 28px 20px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-fast);
+}
+.creator-card:hover { transform: translateY(-6px); }
+.creator-avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), #7c3aed);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 14px;
+}
+.creator-name { font-size: 0.98rem; font-weight: 700; margin-bottom: 4px; }
+.creator-role { color: var(--text-secondary); font-size: 0.8rem; }
+
+/* ===================== FOOTER ===================== */
+.app-footer {
+  padding: 26px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+.footer-title { font-weight: 700; margin-bottom: 6px; }
+.footer-creators, .footer-year { color: var(--text-secondary); font-size: 0.82rem; }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .app-header { flex-wrap: wrap; padding: 12px 16px; }
+  .header-center { order: 3; max-width: 100%; width: 100%; }
+  .main-nav { gap: 12px; }
+  .weather-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .map-intro h1 { font-size: 1.4rem; }
+  .map-container { padding: 12px; min-height: 380px; }
+  .side-panel { width: 100%; max-width: 100%; }
+  .weather-modal { padding: 22px 16px; }
+  .main-temp { font-size: 2.4rem; }
+  .main-nav .nav-link { font-size: 0.8rem; }
+  .creator-card { width: 100%; max-width: 260px; }
+}

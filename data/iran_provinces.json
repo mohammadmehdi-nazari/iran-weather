@@ -1,0 +1,410 @@
+{
+  "provinces": [
+    {
+      "id": "tehran",
+      "name_fa": "تهران",
+      "name_en": "Tehran",
+      "lat": 35.6892,
+      "lng": 51.3890,
+      "cities": [
+        {"name_fa": "تهران", "name_en": "Tehran", "lat": 35.6892, "lng": 51.3890},
+        {"name_fa": "کرج", "name_en": "Karaj", "lat": 35.8400, "lng": 50.9391},
+        {"name_fa": "ورامین", "name_en": "Varamin", "lat": 35.3269, "lng": 51.6453},
+        {"name_fa": "اسلامشهر", "name_en": "Eslamshahr", "lat": 35.5450, "lng": 51.2231},
+        {"name_fa": "دماوند", "name_en": "Damavand", "lat": 35.7181, "lng": 52.0644}
+      ]
+    },
+    {
+      "id": "fars",
+      "name_fa": "فارس",
+      "name_en": "Fars",
+      "lat": 29.5918,
+      "lng": 52.5836,
+      "cities": [
+        {"name_fa": "شیراز", "name_en": "Shiraz", "lat": 29.5918, "lng": 52.5836},
+        {"name_fa": "مرودشت", "name_en": "Marvdasht", "lat": 29.8756, "lng": 52.8036},
+        {"name_fa": "جهرم", "name_en": "Jahrom", "lat": 28.5000, "lng": 53.5583},
+        {"name_fa": "فسا", "name_en": "Fasa", "lat": 28.9383, "lng": 53.6481},
+        {"name_fa": "لار", "name_en": "Lar", "lat": 27.6783, "lng": 54.3392},
+        {"name_fa": "کازرون", "name_en": "Kazerun", "lat": 29.6194, "lng": 51.6536}
+      ]
+    },
+    {
+      "id": "isfahan",
+      "name_fa": "اصفهان",
+      "name_en": "Isfahan",
+      "lat": 32.6539,
+      "lng": 51.6660,
+      "cities": [
+        {"name_fa": "اصفهان", "name_en": "Isfahan", "lat": 32.6539, "lng": 51.6660},
+        {"name_fa": "کاشان", "name_en": "Kashan", "lat": 33.9850, "lng": 51.4103},
+        {"name_fa": "نجف‌آباد", "name_en": "Najafabad", "lat": 32.6339, "lng": 51.3667},
+        {"name_fa": "خمینی‌شهر", "name_en": "Khomeinishahr", "lat": 32.7017, "lng": 51.5217},
+        {"name_fa": "شهرضا", "name_en": "Shahreza", "lat": 32.0064, "lng": 51.8664}
+      ]
+    },
+    {
+      "id": "khorasan_razavi",
+      "name_fa": "خراسان رضوی",
+      "name_en": "Khorasan Razavi",
+      "lat": 36.2970,
+      "lng": 59.6062,
+      "cities": [
+        {"name_fa": "مشهد", "name_en": "Mashhad", "lat": 36.2970, "lng": 59.6062},
+        {"name_fa": "نیشابور", "name_en": "Neyshabur", "lat": 36.2133, "lng": 58.7958},
+        {"name_fa": "سبزوار", "name_en": "Sabzevar", "lat": 36.2126, "lng": 57.6786},
+        {"name_fa": "تربت حیدریه", "name_en": "Torbat-e Heydarieh", "lat": 35.2725, "lng": 59.2192},
+        {"name_fa": "قوچان", "name_en": "Quchan", "lat": 37.1064, "lng": 58.5083}
+      ]
+    },
+    {
+      "id": "khuzestan",
+      "name_fa": "خوزستان",
+      "name_en": "Khuzestan",
+      "lat": 31.3183,
+      "lng": 48.6706,
+      "cities": [
+        {"name_fa": "اهواز", "name_en": "Ahvaz", "lat": 31.3183, "lng": 48.6706},
+        {"name_fa": "آبادان", "name_en": "Abadan", "lat": 30.3392, "lng": 48.3043},
+        {"name_fa": "خرمشهر", "name_en": "Khorramshahr", "lat": 30.4397, "lng": 48.1664},
+        {"name_fa": "دزفول", "name_en": "Dezful", "lat": 32.3814, "lng": 48.4058},
+        {"name_fa": "ماهشهر", "name_en": "Mahshahr", "lat": 30.5589, "lng": 49.1961}
+      ]
+    },
+    {
+      "id": "east_azerbaijan",
+      "name_fa": "آذربایجان شرقی",
+      "name_en": "East Azerbaijan",
+      "lat": 38.0800,
+      "lng": 46.2919,
+      "cities": [
+        {"name_fa": "تبریز", "name_en": "Tabriz", "lat": 38.0800, "lng": 46.2919},
+        {"name_fa": "مراغه", "name_en": "Maragheh", "lat": 37.3878, "lng": 46.2397},
+        {"name_fa": "میانه", "name_en": "Mianeh", "lat": 37.4275, "lng": 47.7139},
+        {"name_fa": "مرند", "name_en": "Marand", "lat": 38.4306, "lng": 45.7756},
+        {"name_fa": "اهر", "name_en": "Ahar", "lat": 38.4761, "lng": 47.0683}
+      ]
+    },
+    {
+      "id": "west_azerbaijan",
+      "name_fa": "آذربایجان غربی",
+      "name_en": "West Azerbaijan",
+      "lat": 37.5527,
+      "lng": 45.0761,
+      "cities": [
+        {"name_fa": "ارومیه", "name_en": "Urmia", "lat": 37.5527, "lng": 45.0761},
+        {"name_fa": "خوی", "name_en": "Khoy", "lat": 38.5503, "lng": 44.9517},
+        {"name_fa": "مهاباد", "name_en": "Mahabad", "lat": 36.7631, "lng": 45.7219},
+        {"name_fa": "میاندوآب", "name_en": "Miandoab", "lat": 36.9686, "lng": 46.1058},
+        {"name_fa": "بوکان", "name_en": "Bukan", "lat": 36.5225, "lng": 46.2081}
+      ]
+    },
+    {
+      "id": "mazandaran",
+      "name_fa": "مازندران",
+      "name_en": "Mazandaran",
+      "lat": 36.5658,
+      "lng": 53.0588,
+      "cities": [
+        {"name_fa": "ساری", "name_en": "Sari", "lat": 36.5658, "lng": 53.0588},
+        {"name_fa": "بابل", "name_en": "Babol", "lat": 36.5511, "lng": 52.6791},
+        {"name_fa": "آمل", "name_en": "Amol", "lat": 36.4694, "lng": 52.3506},
+        {"name_fa": "قائم‌شهر", "name_en": "Qaemshahr", "lat": 36.4642, "lng": 52.8583},
+        {"name_fa": "نوشهر", "name_en": "Nowshahr", "lat": 36.6497, "lng": 51.4964},
+        {"name_fa": "چالوس", "name_en": "Chalus", "lat": 36.6558, "lng": 51.4189}
+      ]
+    },
+    {
+      "id": "gilan",
+      "name_fa": "گیلان",
+      "name_en": "Gilan",
+      "lat": 37.2809,
+      "lng": 49.5832,
+      "cities": [
+        {"name_fa": "رشت", "name_en": "Rasht", "lat": 37.2809, "lng": 49.5832},
+        {"name_fa": "انزلی", "name_en": "Anzali", "lat": 37.4739, "lng": 49.4614},
+        {"name_fa": "لاهیجان", "name_en": "Lahijan", "lat": 37.2064, "lng": 50.0058},
+        {"name_fa": "آستارا", "name_en": "Astara", "lat": 38.4258, "lng": 48.8697},
+        {"name_fa": "رودسر", "name_en": "Rudsar", "lat": 37.1367, "lng": 50.2892}
+      ]
+    },
+    {
+      "id": "kerman",
+      "name_fa": "کرمان",
+      "name_en": "Kerman",
+      "lat": 30.2839,
+      "lng": 57.0834,
+      "cities": [
+        {"name_fa": "کرمان", "name_en": "Kerman", "lat": 30.2839, "lng": 57.0834},
+        {"name_fa": "رفسنجان", "name_en": "Rafsanjan", "lat": 30.4067, "lng": 55.9939},
+        {"name_fa": "سیرجان", "name_en": "Sirjan", "lat": 29.4519, "lng": 55.6814},
+        {"name_fa": "بم", "name_en": "Bam", "lat": 29.1061, "lng": 58.3572},
+        {"name_fa": "جیرفت", "name_en": "Jiroft", "lat": 28.6753, "lng": 57.7267}
+      ]
+    },
+    {
+      "id": "sistan_baluchestan",
+      "name_fa": "سیستان و بلوچستان",
+      "name_en": "Sistan and Baluchestan",
+      "lat": 29.4963,
+      "lng": 60.8629,
+      "cities": [
+        {"name_fa": "زاهدان", "name_en": "Zahedan", "lat": 29.4963, "lng": 60.8629},
+        {"name_fa": "زابل", "name_en": "Zabol", "lat": 31.0295, "lng": 61.5010},
+        {"name_fa": "چابهار", "name_en": "Chabahar", "lat": 25.2919, "lng": 60.6430},
+        {"name_fa": "ایرانشهر", "name_en": "Iranshahr", "lat": 27.2025, "lng": 60.6850},
+        {"name_fa": "خاش", "name_en": "Khash", "lat": 28.2211, "lng": 61.2158}
+      ]
+    },
+    {
+      "id": "hormozgan",
+      "name_fa": "هرمزگان",
+      "name_en": "Hormozgan",
+      "lat": 27.1865,
+      "lng": 56.2808,
+      "cities": [
+        {"name_fa": "بندرعباس", "name_en": "Bandar Abbas", "lat": 27.1865, "lng": 56.2808},
+        {"name_fa": "قشم", "name_en": "Qeshm", "lat": 26.9581, "lng": 56.2719},
+        {"name_fa": "میناب", "name_en": "Minab", "lat": 27.1467, "lng": 57.0806},
+        {"name_fa": "بندرلنگه", "name_en": "Bandar Lengeh", "lat": 26.5581, "lng": 54.8814}
+      ]
+    },
+    {
+      "id": "yazd",
+      "name_fa": "یزد",
+      "name_en": "Yazd",
+      "lat": 31.8974,
+      "lng": 54.3569,
+      "cities": [
+        {"name_fa": "یزد", "name_en": "Yazd", "lat": 31.8974, "lng": 54.3569},
+        {"name_fa": "میبد", "name_en": "Meybod", "lat": 32.2500, "lng": 54.0167},
+        {"name_fa": "اردکان", "name_en": "Ardakan", "lat": 32.3100, "lng": 54.0175},
+        {"name_fa": "بافق", "name_en": "Bafq", "lat": 31.6069, "lng": 55.4064}
+      ]
+    },
+    {
+      "id": "kermanshah",
+      "name_fa": "کرمانشاه",
+      "name_en": "Kermanshah",
+      "lat": 34.3142,
+      "lng": 47.0650,
+      "cities": [
+        {"name_fa": "کرمانشاه", "name_en": "Kermanshah", "lat": 34.3142, "lng": 47.0650},
+        {"name_fa": "اسلام‌آباد غرب", "name_en": "Eslamabad-e Gharb", "lat": 34.1097, "lng": 46.5297},
+        {"name_fa": "سنقر", "name_en": "Sonqor", "lat": 34.7811, "lng": 47.6017},
+        {"name_fa": "پاوه", "name_en": "Paveh", "lat": 35.0483, "lng": 46.3550}
+      ]
+    },
+        {
+      "id": "kurdistan",
+      "name_fa": "کردستان",
+      "name_en": "Kurdistan",
+      "lat": 35.3111,
+      "lng": 46.9923,
+      "cities": [
+        {"name_fa": "سنندج", "name_en": "Sanandaj", "lat": 35.3111, "lng": 46.9923},
+        {"name_fa": "سقز", "name_en": "Saqqez", "lat": 36.2467, "lng": 46.2753},
+        {"name_fa": "بانه", "name_en": "Baneh", "lat": 35.9975, "lng": 45.8828},
+        {"name_fa": "مریوان", "name_en": "Marivan", "lat": 35.5219, "lng": 46.1719},
+        {"name_fa": "قروه", "name_en": "Qorveh", "lat": 35.1653, "lng": 47.8064}
+      ]
+    },
+    {
+      "id": "qom",
+      "name_fa": "قم",
+      "name_en": "Qom",
+      "lat": 34.6416,
+      "lng": 50.8746,
+      "cities": [
+        {"name_fa": "قم", "name_en": "Qom", "lat": 34.6416, "lng": 50.8746}
+      ]
+    },
+    {
+      "id": "markazi",
+      "name_fa": "مرکزی",
+      "name_en": "Markazi",
+      "lat": 34.0954,
+      "lng": 49.6919,
+      "cities": [
+        {"name_fa": "اراک", "name_en": "Arak", "lat": 34.0954, "lng": 49.6919},
+        {"name_fa": "ساوه", "name_en": "Saveh", "lat": 35.0213, "lng": 50.3564},
+        {"name_fa": "خمین", "name_en": "Khomein", "lat": 33.6417, "lng": 50.0783},
+        {"name_fa": "محلات", "name_en": "Mahallat", "lat": 33.9083, "lng": 50.4536}
+      ]
+    },
+    {
+      "id": "hamadan",
+      "name_fa": "همدان",
+      "name_en": "Hamadan",
+      "lat": 34.7992,
+      "lng": 48.5146,
+      "cities": [
+        {"name_fa": "همدان", "name_en": "Hamadan", "lat": 34.7992, "lng": 48.5146},
+        {"name_fa": "ملایر", "name_en": "Malayer", "lat": 34.2967, "lng": 48.8175},
+        {"name_fa": "نهاوند", "name_en": "Nahavand", "lat": 34.1900, "lng": 48.3733},
+        {"name_fa": "تویسرکان", "name_en": "Tuyserkan", "lat": 34.5486, "lng": 48.4444}
+      ]
+    },
+    {
+      "id": "zanjan",
+      "name_fa": "زنجان",
+      "name_en": "Zanjan",
+      "lat": 36.6736,
+      "lng": 48.4787,
+      "cities": [
+        {"name_fa": "زنجان", "name_en": "Zanjan", "lat": 36.6736, "lng": 48.4787},
+        {"name_fa": "ابهر", "name_en": "Abhar", "lat": 36.1497, "lng": 49.2172},
+        {"name_fa": "خدابنده", "name_en": "Khodabandeh", "lat": 36.1275, "lng": 48.5794}
+      ]
+    },
+    {
+      "id": "qazvin",
+      "name_fa": "قزوین",
+      "name_en": "Qazvin",
+      "lat": 36.2688,
+      "lng": 50.0041,
+      "cities": [
+        {"name_fa": "قزوین", "name_en": "Qazvin", "lat": 36.2688, "lng": 50.0041},
+        {"name_fa": "تاکستان", "name_en": "Takestan", "lat": 36.0664, "lng": 49.6944},
+        {"name_fa": "البرز", "name_en": "Alborz", "lat": 36.0500, "lng": 50.0167}
+      ]
+    },
+    {
+      "id": "ardabil",
+      "name_fa": "اردبیل",
+      "name_en": "Ardabil",
+      "lat": 38.2498,
+      "lng": 48.2933,
+      "cities": [
+        {"name_fa": "اردبیل", "name_en": "Ardabil", "lat": 38.2498, "lng": 48.2933},
+        {"name_fa": "مشگین‌شهر", "name_en": "Meshgin Shahr", "lat": 38.3900, "lng": 47.6772},
+        {"name_fa": "پارس‌آباد", "name_en": "Parsabad", "lat": 39.6483, "lng": 47.9169},
+        {"name_fa": "خلخال", "name_en": "Khalkhal", "lat": 37.6197, "lng": 48.5306}
+      ]
+    },
+    {
+      "id": "bushehr",
+      "name_fa": "بوشهر",
+      "name_en": "Bushehr",
+      "lat": 28.9234,
+      "lng": 50.8203,
+      "cities": [
+        {"name_fa": "بوشهر", "name_en": "Bushehr", "lat": 28.9234, "lng": 50.8203},
+        {"name_fa": "برازجان", "name_en": "Borazjan", "lat": 29.2650, "lng": 51.2192},
+        {"name_fa": "گناوه", "name_en": "Genaveh", "lat": 29.5817, "lng": 50.5178},
+        {"name_fa": "کنگان", "name_en": "Kangan", "lat": 27.8386, "lng": 52.0644}
+      ]
+    },
+    {
+      "id": "lorestan",
+      "name_fa": "لرستان",
+      "name_en": "Lorestan",
+      "lat": 33.4878,
+      "lng": 48.3558,
+      "cities": [
+        {"name_fa": "خرم‌آباد", "name_en": "Khorramabad", "lat": 33.4878, "lng": 48.3558},
+        {"name_fa": "بروجرد", "name_en": "Borujerd", "lat": 33.8975, "lng": 48.7517},
+        {"name_fa": "دورود", "name_en": "Dorud", "lat": 33.4964, "lng": 49.0611},
+        {"name_fa": "الیگودرز", "name_en": "Aligudarz", "lat": 33.4008, "lng": 49.6961}
+      ]
+    },
+    {
+      "id": "ilam",
+      "name_fa": "ایلام",
+      "name_en": "Ilam",
+      "lat": 33.6374,
+      "lng": 46.4227,
+      "cities": [
+        {"name_fa": "ایلام", "name_en": "Ilam", "lat": 33.6374, "lng": 46.4227},
+        {"name_fa": "دهلران", "name_en": "Dehloran", "lat": 32.6942, "lng": 47.2678},
+        {"name_fa": "آبدانان", "name_en": "Abdanan", "lat": 32.9917, "lng": 47.4189}
+      ]
+    },
+    {
+      "id": "kohgiluyeh_boyerahmad",
+      "name_fa": "کهگیلویه و بویراحمد",
+      "name_en": "Kohgiluyeh and Boyer-Ahmad",
+      "lat": 30.6683,
+      "lng": 51.5892,
+      "cities": [
+        {"name_fa": "یاسوج", "name_en": "Yasuj", "lat": 30.6683, "lng": 51.5892},
+        {"name_fa": "گچساران", "name_en": "Gachsaran", "lat": 30.3583, "lng": 50.7981},
+        {"name_fa": "دهدشت", "name_en": "Dehdasht", "lat": 30.7822, "lng": 50.5539}
+      ]
+    },
+    {
+      "id": "chaharmahal_bakhtiari",
+      "name_fa": "چهارمحال و بختیاری",
+      "name_en": "Chaharmahal and Bakhtiari",
+      "lat": 32.3256,
+      "lng": 50.8642,
+      "cities": [
+        {"name_fa": "شهرکرد", "name_en": "Shahrekord", "lat": 32.3256, "lng": 50.8642},
+        {"name_fa": "بروجن", "name_en": "Borujen", "lat": 31.9739, "lng": 51.2917},
+        {"name_fa": "فارسان", "name_en": "Farsan", "lat": 32.2617, "lng": 50.5750}
+      ]
+    },
+    {
+      "id": "semnan",
+      "name_fa": "سمنان",
+      "name_en": "Semnan",
+      "lat": 35.5769,
+      "lng": 53.3944,
+      "cities": [
+        {"name_fa": "سمنان", "name_en": "Semnan", "lat": 35.5769, "lng": 53.3944},
+        {"name_fa": "شاهرود", "name_en": "Shahrud", "lat": 36.4181, "lng": 54.9764},
+        {"name_fa": "دامغان", "name_en": "Damghan", "lat": 36.1683, "lng": 54.3486},
+        {"name_fa": "گرمسار", "name_en": "Garmsar", "lat": 35.2214, "lng": 52.3419}
+      ]
+    },
+    {
+      "id": "golestan",
+      "name_fa": "گلستان",
+      "name_en": "Golestan",
+      "lat": 36.8385,
+      "lng": 54.4347,
+      "cities": [
+        {"name_fa": "گرگان", "name_en": "Gorgan", "lat": 36.8385, "lng": 54.4347},
+        {"name_fa": "گنبد کاووس", "name_en": "Gonbad-e Kavus", "lat": 37.2506, "lng": 55.1725},
+        {"name_fa": "علی‌آباد", "name_en": "Aliabad", "lat": 36.9139, "lng": 54.8642},
+        {"name_fa": "بندر ترکمن", "name_en": "Bandar Torkaman", "lat": 36.9047, "lng": 54.0872}
+      ]
+    },
+    {
+      "id": "north_khorasan",
+      "name_fa": "خراسان شمالی",
+      "name_en": "North Khorasan",
+      "lat": 37.4747,
+      "lng": 57.3308,
+      "cities": [
+        {"name_fa": "بجنورد", "name_en": "Bojnord", "lat": 37.4747, "lng": 57.3308},
+        {"name_fa": "شیروان", "name_en": "Shirvan", "lat": 37.3986, "lng": 57.9256},
+        {"name_fa": "اسفراین", "name_en": "Esfarayen", "lat": 37.0794, "lng": 57.5119}
+      ]
+    },
+    {
+      "id": "south_khorasan",
+      "name_fa": "خراسان جنوبی",
+      "name_en": "South Khorasan",
+      "lat": 32.8649,
+      "lng": 59.2262,
+      "cities": [
+        {"name_fa": "بیرجند", "name_en": "Birjand", "lat": 32.8649, "lng": 59.2262},
+        {"name_fa": "قائنات", "name_en": "Qaenat", "lat": 33.7264, "lng": 59.1789},
+        {"name_fa": "فردوس", "name_en": "Ferdows", "lat": 34.0158, "lng": 58.1739}
+      ]
+    },
+    {
+      "id": "alborz",
+      "name_fa": "البرز",
+      "name_en": "Alborz",
+      "lat": 35.8400,
+      "lng": 50.9391,
+      "cities": [
+        {"name_fa": "کرج", "name_en": "Karaj", "lat": 35.8400, "lng": 50.9391},
+        {"name_fa": "نظرآباد", "name_en": "Nazarabad", "lat": 35.9506, "lng": 50.6117},
+        {"name_fa": "هشتگرد", "name_en": "Hashtgerd", "lat": 35.9689, "lng": 50.6883}
+      ]
+    }
+  ]
+}
